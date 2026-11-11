@@ -6,8 +6,10 @@ buttons.forEach((btn)=>{
     btn.addEventListener("click", ()=>{
         buttons.forEach((btn)=>{
             btn.classList.remove("active");
+            btn.setAttribute("aria-selected", "false");
         });
         btn.classList.add("active");
+        btn.setAttribute("aria-selected", "true");
         const id = btn.id;
         sections.forEach((section)=>{
             section.classList.remove("active");
