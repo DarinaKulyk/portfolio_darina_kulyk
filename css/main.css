@@ -3,7 +3,8 @@
     --white: #fff;
     --text: #C4C4C4;
     --bg: #111111;
-    --link: #6CACE4;
+    --link: #33D2FF;
+    --accent-gradient: linear-gradient(to right, #9845E8, #33D2FF, #DD5789);
     --social-icon: #C4C4C4;
     --regular-text: 16px;
     --large-text: 18px;
@@ -112,7 +113,7 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
-    animation: shine 3s ease-in-out 0.3s 1 both;
+    animation: shine 7s linear infinite;
 }
 @media (prefers-reduced-motion: reduce) {
     .linear-wipe { animation: none; }
@@ -217,7 +218,9 @@ body {
 
 .divider{
     margin: 80px 0;
-    border: 0.5px solid #C4C4C4;
+    border: 0;
+    height: 1px;
+    background: var(--accent-gradient);
 }
 
 
@@ -425,4 +428,35 @@ body {
         flex-direction: column;
         padding: 40px 0;
     }
+}
+
+/* ACCENT GRADIENT */
+
+/* Darker link color in light theme for readable contrast on white */
+body:not(.dark){
+    --link: #0B7BA3;
+}
+
+/* Project cards: gradient frame on hover */
+.card .img{
+    padding: 1px;
+    background: transparent;
+    transition: background 0.2s ease;
+}
+.card img{
+    display: block;
+}
+.card:hover .img{
+    background: var(--accent-gradient);
+}
+
+/* Contact buttons: gradient border on hover */
+.socials-links{
+    transition: border-color 0.2s ease;
+}
+.socials-links:hover{
+    border-color: transparent;
+    background:
+        linear-gradient(var(--bg), var(--bg)) padding-box,
+        var(--accent-gradient) border-box;
 }
