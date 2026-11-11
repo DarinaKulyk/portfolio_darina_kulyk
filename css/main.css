@@ -3,7 +3,7 @@
     --white: #fff;
     --text: #C4C4C4;
     --bg: #111111;
-    --link: #6CACE4;
+    --link: #33D2FF;
     --social-icon: #C4C4C4;
     --regular-text: 16px;
     --large-text: 18px;
@@ -56,6 +56,12 @@ body {
     color: var(--white);
     font-size: 18px;
     margin-left: 30px;
+    background: none;
+    border: 0;
+    padding: 0;
+    font-family: inherit;
+    font-weight: inherit;
+    line-height: inherit;
 }
 
 
@@ -114,6 +120,9 @@ body {
 
     animation: shine 7s linear infinite;
 }
+@media (prefers-reduced-motion: reduce) {
+    .linear-wipe { animation: none; }
+}
 @keyframes shine {
     to {
         background-position: 200% center;
@@ -154,6 +163,11 @@ body {
     padding: 10px 40px;
     cursor: pointer;
     white-space: nowrap;
+    background: none;
+    border: 0;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
 }
 
 
@@ -422,4 +436,11 @@ body {
         flex-direction: column;
         padding: 40px 0;
     }
+}
+
+/* LINK COLOR */
+
+/* Darker link color in light theme for readable contrast on white */
+body:not(.dark){
+    --link: #0B7BA3;
 }

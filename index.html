@@ -6,7 +6,7 @@
   <title>Darina Kulyk — Product Designer</title>
   <meta name="description" content="Product designer for complex B2B platforms, data-heavy tools and design systems. Case studies, experience and contacts.">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" href="img/favicon.ico">
   <meta property="og:type" content="website">
@@ -34,11 +34,11 @@
   </div>
 
   <div class="menu">
-    <div class="menu-item" data-anchor="resume">Resume</div>
-    <div class="menu-item" data-anchor="projects">Projects</div>
-    <div class="menu-item" data-anchor="contact">Contact</div>
+    <button type="button" class="menu-item" data-anchor="resume">Resume</button>
+    <button type="button" class="menu-item" data-anchor="projects">Projects</button>
+    <button type="button" class="menu-item" data-anchor="contact">Contact</button>
 
-    <div class="menu-item toggle-theme" id="darkToggle">
+    <button type="button" class="menu-item toggle-theme" id="darkToggle" aria-label="Switch light/dark theme">
       <svg class="icon-color" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g clip-path="url(#clip0_677_3207)">
           <path d="M12 18C10.4087 18 8.88258 17.3679 7.75736 16.2426C6.63214 15.1174 6 13.5913 6 12C6 10.4087 6.63214 8.88258 7.75736 7.75736C8.88258 6.63214 10.4087 6 12 6C13.5913 6 15.1174 6.63214 16.2426 7.75736C17.3679 8.88258 18 10.4087 18 12C18 13.5913 17.3679 15.1174 16.2426 16.2426C15.1174 17.3679 13.5913 18 12 18ZM11 1H13V4H11V1ZM11 20H13V23H11V20ZM3.515 4.929L4.929 3.515L7.05 5.636L5.636 7.05L3.515 4.93V4.929ZM16.95 18.364L18.364 16.95L20.485 19.071L19.071 20.485L16.95 18.364ZM19.071 3.514L20.485 4.929L18.364 7.05L16.95 5.636L19.071 3.515V3.514ZM5.636 16.95L7.05 18.364L4.929 20.485L3.515 19.071L5.636 16.95ZM23 11V13H20V11H23ZM4 11V13H1V11H4Z"/>
@@ -49,10 +49,11 @@
           </clipPath>
         </defs>
       </svg>
-    </div>
+    </button>
   </div>
 </header>
 
+<main>
 <div class="container hero">
   <div class="subtitle">Hey, I’m</div>
 
@@ -88,14 +89,14 @@
 
   <h2 class="secondary-title">experience</h2>
 
-  <div class="tabs-menu">
-    <div class="tabs-menu-item active" id="1">Citibank</div>
-    <div class="tabs-menu-item" id="2">TUI</div>
-    <div class="tabs-menu-item" id="3">GlobalLogic</div>
-    <div class="tabs-menu-item" id="4">Parfums</div>
-    <div class="tabs-menu-item" id="5">123 workforce</div>
-    <div class="tabs-menu-item" id="6">Aweb</div>
-    <div class="tabs-menu-item" id="7">Vedmedia</div>
+  <div class="tabs-menu" role="tablist" aria-label="Companies">
+    <button type="button" role="tab" aria-selected="true" class="tabs-menu-item active" id="1">Citibank</button>
+    <button type="button" role="tab" aria-selected="false" class="tabs-menu-item" id="2">TUI</button>
+    <button type="button" role="tab" aria-selected="false" class="tabs-menu-item" id="3">GlobalLogic</button>
+    <button type="button" role="tab" aria-selected="false" class="tabs-menu-item" id="4">Parfums</button>
+    <button type="button" role="tab" aria-selected="false" class="tabs-menu-item" id="5">123 workforce</button>
+    <button type="button" role="tab" aria-selected="false" class="tabs-menu-item" id="6">Aweb</button>
+    <button type="button" role="tab" aria-selected="false" class="tabs-menu-item" id="7">Vedmedia</button>
   </div>
 
   <div class="tab-wrapper">
@@ -154,12 +155,12 @@
         <div class="card-container">
           <div class="card">
             <div class="img">
-              <img src="./img/Citibank.png" alt="">
+              <img src="./img/Citibank.png" alt="Data Navigator — screen preview">
             </div>
 
             <div class="title">
               <h2 class="h2-title">Data Navigator</h2>
-              <a href="">
+              <a href="https://www.figma.com/design/psdauvwRXLHxOX6yPIVe2A/Portfolio--Darina-K-?node-id=3454-80358&t=akDWBqUoi22gekhh-4" target="_blank" rel="noopener" aria-label="Open Data Navigator case study">
                 <svg class="icon-color" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g clip-path="url(#clip0_61_2587)">
                     <path d="M17.6568 15.328L16.2428 13.914L17.6568 12.5C18.0282 12.1286 18.3229 11.6876 18.5239 11.2023C18.7249 10.717 18.8284 10.1968 18.8284 9.6715C18.8284 9.1462 18.7249 8.62605 18.5239 8.14073C18.3229 7.65542 18.0282 7.21445 17.6568 6.843C17.2853 6.47156 16.8444 6.17691 16.359 5.97589C15.8737 5.77487 15.3536 5.6714 14.8283 5.6714C14.303 5.6714 13.7828 5.77487 13.2975 5.97589C12.8122 6.17691 12.3712 6.47156 11.9998 6.843L10.5858 8.257L9.17177 6.843L10.5858 5.429C11.7141 4.31892 13.2353 3.69966 14.8181 3.7061C16.401 3.71255 17.9171 4.34418 19.0364 5.46341C20.1556 6.58265 20.7872 8.0988 20.7937 9.68162C20.8001 11.2644 20.1808 12.7857 19.0708 13.914L17.6568 15.328ZM14.8278 18.157L13.4138 19.571C12.8583 20.1356 12.1965 20.5846 11.4666 20.8922C10.7367 21.1998 9.95319 21.3598 9.16115 21.363C8.36911 21.3662 7.58428 21.2126 6.85191 20.911C6.11954 20.6094 5.45414 20.1658 4.89408 19.6057C4.33402 19.0456 3.89039 18.3802 3.58878 17.6479C3.28717 16.9155 3.13354 16.1307 3.13677 15.3386C3.13999 14.5466 3.3 13.763 3.60757 13.0331C3.91513 12.3033 4.36417 11.6415 4.92877 11.086L6.34277 9.672L7.75677 11.086L6.34277 12.5C5.97133 12.8714 5.67668 13.3124 5.47566 13.7977C5.27463 14.283 5.17117 14.8032 5.17117 15.3285C5.17117 15.8538 5.27463 16.374 5.47566 16.8593C5.67668 17.3446 5.97133 17.7856 6.34277 18.157C6.71421 18.5284 7.15518 18.8231 7.6405 19.0241C8.12581 19.2251 8.64597 19.3286 9.17127 19.3286C9.69657 19.3286 10.2167 19.2251 10.702 19.0241C11.1874 18.8231 11.6283 18.5284 11.9998 18.157L13.4138 16.743L14.8278 18.157ZM14.8278 8.257L16.2428 9.672L9.17177 16.742L7.75677 15.328L14.8278 8.258V8.257Z"/>
@@ -247,12 +248,12 @@
         <div class="card-container">
           <div class="card">
             <div class="img">
-              <img src="./img/structural_locations.png" alt="">
+              <img src="./img/structural_locations.png" alt="Trips — screen preview">
             </div>
 
             <div class="title">
               <h2 class="h2-title">Trips</h2>
-              <a href="">
+              <a href="https://www.figma.com/file/psdauvwRXLHxOX6yPIVe2A/Portfolio-(Darina-K)?type=design&node-id=1135-102214&mode=design&t=FT90Uy347r8GIxfB-4" target="_blank" rel="noopener" aria-label="Open Trips case study">
                 <svg class="icon-color" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g clip-path="url(#clip0_61_2587)">
                     <path d="M17.6568 15.328L16.2428 13.914L17.6568 12.5C18.0282 12.1286 18.3229 11.6876 18.5239 11.2023C18.7249 10.717 18.8284 10.1968 18.8284 9.6715C18.8284 9.1462 18.7249 8.62605 18.5239 8.14073C18.3229 7.65542 18.0282 7.21445 17.6568 6.843C17.2853 6.47156 16.8444 6.17691 16.359 5.97589C15.8737 5.77487 15.3536 5.6714 14.8283 5.6714C14.303 5.6714 13.7828 5.77487 13.2975 5.97589C12.8122 6.17691 12.3712 6.47156 11.9998 6.843L10.5858 8.257L9.17177 6.843L10.5858 5.429C11.7141 4.31892 13.2353 3.69966 14.8181 3.7061C16.401 3.71255 17.9171 4.34418 19.0364 5.46341C20.1556 6.58265 20.7872 8.0988 20.7937 9.68162C20.8001 11.2644 20.1808 12.7857 19.0708 13.914L17.6568 15.328ZM14.8278 18.157L13.4138 19.571C12.8583 20.1356 12.1965 20.5846 11.4666 20.8922C10.7367 21.1998 9.95319 21.3598 9.16115 21.363C8.36911 21.3662 7.58428 21.2126 6.85191 20.911C6.11954 20.6094 5.45414 20.1658 4.89408 19.6057C4.33402 19.0456 3.89039 18.3802 3.58878 17.6479C3.28717 16.9155 3.13354 16.1307 3.13677 15.3386C3.13999 14.5466 3.3 13.763 3.60757 13.0331C3.91513 12.3033 4.36417 11.6415 4.92877 11.086L6.34277 9.672L7.75677 11.086L6.34277 12.5C5.97133 12.8714 5.67668 13.3124 5.47566 13.7977C5.27463 14.283 5.17117 14.8032 5.17117 15.3285C5.17117 15.8538 5.27463 16.374 5.47566 16.8593C5.67668 17.3446 5.97133 17.7856 6.34277 18.157C6.71421 18.5284 7.15518 18.8231 7.6405 19.0241C8.12581 19.2251 8.64597 19.3286 9.17127 19.3286C9.69657 19.3286 10.2167 19.2251 10.702 19.0241C11.1874 18.8231 11.6283 18.5284 11.9998 18.157L13.4138 16.743L14.8278 18.157ZM14.8278 8.257L16.2428 9.672L9.17177 16.742L7.75677 15.328L14.8278 8.258V8.257Z"/>
@@ -283,12 +284,12 @@
 
           <div class="card">
             <div class="img">
-              <img src="./img/cruises.png" alt="">
+              <img src="./img/cruises.png" alt="Cruises — screen preview">
             </div>
 
             <div class="title">
               <h2 class="h2-title">Cruises</h2>
-              <a href="">
+              <a href="https://www.figma.com/file/psdauvwRXLHxOX6yPIVe2A/Portfolio-(Darina-K)?type=design&node-id=1135-102214&mode=design&t=FT90Uy347r8GIxfB-4" target="_blank" rel="noopener" aria-label="Open Cruises case study">
                 <svg class="icon-color" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g clip-path="url(#clip0_61_2587)">
                     <path d="M17.6568 15.328L16.2428 13.914L17.6568 12.5C18.0282 12.1286 18.3229 11.6876 18.5239 11.2023C18.7249 10.717 18.8284 10.1968 18.8284 9.6715C18.8284 9.1462 18.7249 8.62605 18.5239 8.14073C18.3229 7.65542 18.0282 7.21445 17.6568 6.843C17.2853 6.47156 16.8444 6.17691 16.359 5.97589C15.8737 5.77487 15.3536 5.6714 14.8283 5.6714C14.303 5.6714 13.7828 5.77487 13.2975 5.97589C12.8122 6.17691 12.3712 6.47156 11.9998 6.843L10.5858 8.257L9.17177 6.843L10.5858 5.429C11.7141 4.31892 13.2353 3.69966 14.8181 3.7061C16.401 3.71255 17.9171 4.34418 19.0364 5.46341C20.1556 6.58265 20.7872 8.0988 20.7937 9.68162C20.8001 11.2644 20.1808 12.7857 19.0708 13.914L17.6568 15.328ZM14.8278 18.157L13.4138 19.571C12.8583 20.1356 12.1965 20.5846 11.4666 20.8922C10.7367 21.1998 9.95319 21.3598 9.16115 21.363C8.36911 21.3662 7.58428 21.2126 6.85191 20.911C6.11954 20.6094 5.45414 20.1658 4.89408 19.6057C4.33402 19.0456 3.89039 18.3802 3.58878 17.6479C3.28717 16.9155 3.13354 16.1307 3.13677 15.3386C3.13999 14.5466 3.3 13.763 3.60757 13.0331C3.91513 12.3033 4.36417 11.6415 4.92877 11.086L6.34277 9.672L7.75677 11.086L6.34277 12.5C5.97133 12.8714 5.67668 13.3124 5.47566 13.7977C5.27463 14.283 5.17117 14.8032 5.17117 15.3285C5.17117 15.8538 5.27463 16.374 5.47566 16.8593C5.67668 17.3446 5.97133 17.7856 6.34277 18.157C6.71421 18.5284 7.15518 18.8231 7.6405 19.0241C8.12581 19.2251 8.64597 19.3286 9.17127 19.3286C9.69657 19.3286 10.2167 19.2251 10.702 19.0241C11.1874 18.8231 11.6283 18.5284 11.9998 18.157L13.4138 16.743L14.8278 18.157ZM14.8278 8.257L16.2428 9.672L9.17177 16.742L7.75677 15.328L14.8278 8.258V8.257Z"/>
@@ -322,12 +323,12 @@
 
           <div class="card">
             <div class="img">
-              <img src="./img/inventory_management.png" alt="">
+              <img src="./img/inventory_management.png" alt="Inventory Management — screen preview">
             </div>
 
             <div class="title">
               <h2 class="h2-title">Inventory Management</h2>
-              <a href="">
+              <a href="https://www.figma.com/file/psdauvwRXLHxOX6yPIVe2A/Portfolio-(Darina-K)?type=design&node-id=1135-102214&mode=design&t=FT90Uy347r8GIxfB-4" target="_blank" rel="noopener" aria-label="Open Inventory Management case study">
                 <svg class="icon-color" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g clip-path="url(#clip0_61_2587)">
                     <path d="M17.6568 15.328L16.2428 13.914L17.6568 12.5C18.0282 12.1286 18.3229 11.6876 18.5239 11.2023C18.7249 10.717 18.8284 10.1968 18.8284 9.6715C18.8284 9.1462 18.7249 8.62605 18.5239 8.14073C18.3229 7.65542 18.0282 7.21445 17.6568 6.843C17.2853 6.47156 16.8444 6.17691 16.359 5.97589C15.8737 5.77487 15.3536 5.6714 14.8283 5.6714C14.303 5.6714 13.7828 5.77487 13.2975 5.97589C12.8122 6.17691 12.3712 6.47156 11.9998 6.843L10.5858 8.257L9.17177 6.843L10.5858 5.429C11.7141 4.31892 13.2353 3.69966 14.8181 3.7061C16.401 3.71255 17.9171 4.34418 19.0364 5.46341C20.1556 6.58265 20.7872 8.0988 20.7937 9.68162C20.8001 11.2644 20.1808 12.7857 19.0708 13.914L17.6568 15.328ZM14.8278 18.157L13.4138 19.571C12.8583 20.1356 12.1965 20.5846 11.4666 20.8922C10.7367 21.1998 9.95319 21.3598 9.16115 21.363C8.36911 21.3662 7.58428 21.2126 6.85191 20.911C6.11954 20.6094 5.45414 20.1658 4.89408 19.6057C4.33402 19.0456 3.89039 18.3802 3.58878 17.6479C3.28717 16.9155 3.13354 16.1307 3.13677 15.3386C3.13999 14.5466 3.3 13.763 3.60757 13.0331C3.91513 12.3033 4.36417 11.6415 4.92877 11.086L6.34277 9.672L7.75677 11.086L6.34277 12.5C5.97133 12.8714 5.67668 13.3124 5.47566 13.7977C5.27463 14.283 5.17117 14.8032 5.17117 15.3285C5.17117 15.8538 5.27463 16.374 5.47566 16.8593C5.67668 17.3446 5.97133 17.7856 6.34277 18.157C6.71421 18.5284 7.15518 18.8231 7.6405 19.0241C8.12581 19.2251 8.64597 19.3286 9.17127 19.3286C9.69657 19.3286 10.2167 19.2251 10.702 19.0241C11.1874 18.8231 11.6283 18.5284 11.9998 18.157L13.4138 16.743L14.8278 18.157ZM14.8278 8.257L16.2428 9.672L9.17177 16.742L7.75677 15.328L14.8278 8.258V8.257Z"/>
@@ -358,12 +359,12 @@
 
           <div class="card">
             <div class="img">
-              <img src="./img/program_change.png" alt="">
+              <img src="./img/program_change.png" alt="Program Change — screen preview">
             </div>
 
             <div class="title">
               <h2 class="h2-title">Program Change</h2>
-              <a href="">
+              <a href="https://www.figma.com/file/psdauvwRXLHxOX6yPIVe2A/Portfolio-(Darina-K)?type=design&node-id=1135-102214&mode=design&t=FT90Uy347r8GIxfB-4" target="_blank" rel="noopener" aria-label="Open Program Change case study">
                 <svg class="icon-color" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g clip-path="url(#clip0_61_2587)">
                     <path d="M17.6568 15.328L16.2428 13.914L17.6568 12.5C18.0282 12.1286 18.3229 11.6876 18.5239 11.2023C18.7249 10.717 18.8284 10.1968 18.8284 9.6715C18.8284 9.1462 18.7249 8.62605 18.5239 8.14073C18.3229 7.65542 18.0282 7.21445 17.6568 6.843C17.2853 6.47156 16.8444 6.17691 16.359 5.97589C15.8737 5.77487 15.3536 5.6714 14.8283 5.6714C14.303 5.6714 13.7828 5.77487 13.2975 5.97589C12.8122 6.17691 12.3712 6.47156 11.9998 6.843L10.5858 8.257L9.17177 6.843L10.5858 5.429C11.7141 4.31892 13.2353 3.69966 14.8181 3.7061C16.401 3.71255 17.9171 4.34418 19.0364 5.46341C20.1556 6.58265 20.7872 8.0988 20.7937 9.68162C20.8001 11.2644 20.1808 12.7857 19.0708 13.914L17.6568 15.328ZM14.8278 18.157L13.4138 19.571C12.8583 20.1356 12.1965 20.5846 11.4666 20.8922C10.7367 21.1998 9.95319 21.3598 9.16115 21.363C8.36911 21.3662 7.58428 21.2126 6.85191 20.911C6.11954 20.6094 5.45414 20.1658 4.89408 19.6057C4.33402 19.0456 3.89039 18.3802 3.58878 17.6479C3.28717 16.9155 3.13354 16.1307 3.13677 15.3386C3.13999 14.5466 3.3 13.763 3.60757 13.0331C3.91513 12.3033 4.36417 11.6415 4.92877 11.086L6.34277 9.672L7.75677 11.086L6.34277 12.5C5.97133 12.8714 5.67668 13.3124 5.47566 13.7977C5.27463 14.283 5.17117 14.8032 5.17117 15.3285C5.17117 15.8538 5.27463 16.374 5.47566 16.8593C5.67668 17.3446 5.97133 17.7856 6.34277 18.157C6.71421 18.5284 7.15518 18.8231 7.6405 19.0241C8.12581 19.2251 8.64597 19.3286 9.17127 19.3286C9.69657 19.3286 10.2167 19.2251 10.702 19.0241C11.1874 18.8231 11.6283 18.5284 11.9998 18.157L13.4138 16.743L14.8278 18.157ZM14.8278 8.257L16.2428 9.672L9.17177 16.742L7.75677 15.328L14.8278 8.258V8.257Z"/>
@@ -602,7 +603,7 @@
         <div class="card-container">
           <div class="card">
             <div class="img">
-              <img src="./img/Permissions and Usage.png" alt="">
+              <img src="./img/Permissions and Usage.png" alt="PHRTF (personalized head-related transfer function) — screen preview">
             </div>
 
             <div class="title">
@@ -638,7 +639,7 @@
 
           <div class="card">
             <div class="img">
-              <img src="./img/dlna.png" alt="">
+              <img src="./img/dlna.png" alt="Dlna — screen preview">
             </div>
 
             <div class="title">
@@ -670,7 +671,7 @@
 
           <div class="card">
             <div class="img">
-              <img src="./img/br_healthCare.png" alt="">
+              <img src="./img/br_healthCare.png" alt="Br HealthCare — screen preview">
             </div>
 
             <div class="title">
@@ -704,7 +705,7 @@
 
           <div class="card">
             <div class="img">
-              <img src="./img/сnnx.png" alt="">
+              <img src="./img/сnnx.png" alt="Cnnx — screen preview">
             </div>
 
             <div class="title">
@@ -801,7 +802,7 @@
         <div class="card-container">
           <div class="card">
             <div class="img">
-              <img src="./img/mobile_app.png" alt="">
+              <img src="./img/mobile_app.png" alt="Mobile App — screen preview">
             </div>
 
             <div class="title">
@@ -835,7 +836,7 @@
 
           <div class="card">
             <div class="img">
-              <img src="./img/web_site.png" alt="">
+              <img src="./img/web_site.png" alt="Web-site — screen preview">
             </div>
 
             <div class="title">
@@ -869,7 +870,7 @@
 
           <div class="card">
             <div class="img">
-              <img src="./img/ui_kit.png" alt="">
+              <img src="./img/ui_kit.png" alt="UI Kit — screen preview">
             </div>
 
             <div class="title">
@@ -949,7 +950,7 @@
         <div class="card-container">
           <div class="card">
             <div class="img">
-              <img src="./img/social_audio_app.png" alt="">
+              <img src="./img/social_audio_app.png" alt="Social audio App — screen preview">
             </div>
 
             <div class="title">
@@ -983,7 +984,7 @@
 
           <div class="card">
             <div class="img">
-              <img src="./img/wellbeing_platform.png" alt="">
+              <img src="./img/wellbeing_platform.png" alt="Wellbeing Platform — screen preview">
             </div>
 
             <div class="title">
@@ -1017,7 +1018,7 @@
 
           <div class="card">
             <div class="img">
-              <img src="./img/digital_agency_website.png" alt="">
+              <img src="./img/digital_agency_website.png" alt="Digital Agency website — screen preview">
             </div>
 
             <div class="title">
@@ -1047,7 +1048,7 @@
 
           <div class="card">
             <div class="img">
-              <img src="./img/pharmtech_company_website.png" alt="">
+              <img src="./img/pharmtech_company_website.png" alt="Pharmtech Company website — screen preview">
             </div>
 
             <div class="title">
@@ -1077,7 +1078,7 @@
 
           <div class="card">
             <div class="img">
-              <img src="./img/digital_agency_website2.png" alt="">
+              <img src="./img/digital_agency_website2.png" alt="Digital Agency website — screen preview">
             </div>
 
             <div class="title">
@@ -1107,7 +1108,7 @@
 
           <div class="card">
             <div class="img">
-              <img src="./img/whiskey_promo_website.png" alt="">
+              <img src="./img/whiskey_promo_website.png" alt="Whiskey promo website — screen preview">
             </div>
 
             <div class="title">
@@ -1137,7 +1138,7 @@
 
           <div class="card">
             <div class="img">
-              <img src="./img/computer_aided_manufacturing.png" alt="">
+              <img src="./img/computer_aided_manufacturing.png" alt="Computer Aided Manufacturing (CAM) software website — screen preview">
             </div>
 
             <div class="title">
@@ -1167,7 +1168,7 @@
 
           <div class="card">
             <div class="img">
-              <img src="./img/fitness_website.png" alt="">
+              <img src="./img/fitness_website.png" alt="Fitness website — screen preview">
             </div>
 
             <div class="title">
@@ -1250,7 +1251,7 @@
         <div class="card-container">
           <div class="card">
             <div class="img">
-              <img src="./img/123_workforce.png" alt="">
+              <img src="./img/123_workforce.png" alt="123 Workforce: Hire Talented Software Engineers — screen preview">
             </div>
 
             <div class="title">
@@ -1284,7 +1285,7 @@
 
           <div class="card">
             <div class="img">
-              <img src="./img/review_app_for_android.png" alt="">
+              <img src="./img/review_app_for_android.png" alt="Review App for Android — screen preview">
             </div>
 
             <div class="title">
@@ -1318,7 +1319,7 @@
 
           <div class="card">
             <div class="img">
-              <img src="./img/remover_sleep_deprivation_app.png" alt="">
+              <img src="./img/remover_sleep_deprivation_app.png" alt="Remover sleep deprivation App — screen preview">
             </div>
 
             <div class="title">
@@ -1417,7 +1418,7 @@
         <div class="card-container">
           <div class="card">
             <div class="img">
-              <img src="./img/agriculture_shop_website.png" alt="">
+              <img src="./img/agriculture_shop_website.png" alt="Agriculture shop Website — screen preview">
             </div>
 
             <div class="title">
@@ -1448,7 +1449,7 @@
 
           <div class="card">
             <div class="img">
-              <img src="./img/health_center_site.png" alt="">
+              <img src="./img/health_center_site.png" alt="Health Center site — screen preview">
             </div>
 
             <div class="title">
@@ -1479,7 +1480,7 @@
 
           <div class="card">
             <div class="img">
-              <img src="./img/flowers_studio_site.png" alt="">
+              <img src="./img/flowers_studio_site.png" alt="Flowers Studio site — screen preview">
             </div>
 
             <div class="title">
@@ -1515,6 +1516,7 @@
 
   <div class="divider"></div>
 </div>
+</main>
 
 <footer class="footer container" id="contact">
   <h2 class="secondary-title">contact</h2>
